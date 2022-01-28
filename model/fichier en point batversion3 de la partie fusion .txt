@@ -1,0 +1,4 @@
+@echo off   # @echo on: Afficher chaque ligne à l'écran (par défaut), y compris le chemin c:\xxxxx\xxxx\>      @echo off: Seulement afficher la sortie de commande à l'écran
+
+copy *.csv donnees.csv # permet de copier (concaténer) touts les fichier au format .csv dans un seul fichier qui sera nommé donnees.csv
+pause #permet de mettre en pause le programme afin de vérifier que ce dernier c'est belle et bien éxécuté sans accros
