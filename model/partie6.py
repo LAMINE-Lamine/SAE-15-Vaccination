@@ -5,13 +5,13 @@ import matplotlib.pyplot as plt
 x = []
 y = []
 
-with open('fusion.csv', "r") as csvfile:
+with open('dataframe.csv', "r") as csvfile:
     plots = csv.reader(csvfile, delimiter=';')
     for row in plots:
         x.append(str(row[5]))
-        y.append(str(row[10]))
+        y.append(str(row[18]))
 
-df = pd.read_csv('fusion.csv')
+df = pd.read_csv('dataframe.csv')
 
 l=[]
 for i in range(len(x)):
@@ -19,9 +19,10 @@ for i in range(len(x)):
         l.append(y[i])
 
 y=[i for i in range(len(l))]
-explode=(0, 0.15, 0, 0)
+
 plt.xlabel('Evolution dans le Haut-Rhin', fontsize=10)
 plt.ylabel('Effectif primo vaccinés', fontsize=10)
-plt.pie(df, explode=explode, labels=l, autopct='%1.1f%%', startangle=90, shadow=True)
-plt.axis('equal')
+plt.plot(y,l)
+plt.title('l évolution de primo vaccinés pour le haut rhin')
+
 plt.show()
