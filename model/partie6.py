@@ -5,13 +5,13 @@ import matplotlib.pyplot as plt
 x = []
 y = []
 
-with open('dataframe.csv', "r") as csvfile:
+with open('fusion.csv', "r") as csvfile:
     plots = csv.reader(csvfile, delimiter=';')
     for row in plots:
         x.append(str(row[5]))
         y.append(str(row[18]))
 
-df = pd.read_csv('dataframe.csv')
+df = pd.read_csv('fusion.csv')
 
 l=[]
 for i in range(len(x)):
